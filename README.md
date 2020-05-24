@@ -6,6 +6,9 @@
 注意: 环境变量在windows 和 mac 上有不同，想兼容的话就下载插件吧。
 
 目录结构：
+
+![大致目录和文件结构](https://img-blog.csdnimg.cn/20200524170756593.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvdmVmaXZlNQ==,size_16,color_FFFFFF,t_70)
+
 ```
 ├─common
 │  ├─dbs                | 定义数据表
