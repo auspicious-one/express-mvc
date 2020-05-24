@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>用户列表：</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>用户名</th>
+                    <th>加密密码</th>
+                    <th>是否激活</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% userList.forEach((user)=>{ %>
+                <tr>
+                    <td><%= user.nickname %></td>
+                    <td><%= user.password %></td>
+                    <td><%= user.is_enabled==1?'已激活':'未激活' %></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
