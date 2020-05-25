@@ -1,9 +1,10 @@
 # express-mvc
-### 基于 express 框架快速构建的 NodeJS - MVC 项目
 
-#### 背景：作者算是重度ES6的使用者，而且之前是开发PHP，就按照以前的逻辑整理了一套MVC的初级封装（版本1.0.0，哈哈哈，后续会优化升级的）, 有问题可以直接联系我。
+## 基于 express 框架快速构建的 NodeJS - MVC 项目
 
-注意: 环境变量在windows 和 mac 上有不同，想兼容的话就下载插件吧。
+### 背景：作者算是重度 ES6 的使用者，而且之前是开发 PHP，就按照以前的逻辑整理了一套 MVC 的初级封装（版本 1.0.0，哈哈哈，后续会优化升级的）, 有问题可以直接联系我。
+
+### 注意: 环境变量在 windows 和 mac 上有不同，想兼容的话就下载插件吧。同时还要检查 NodeJS 版本对 ES6 的支持性,参见 https://blog.csdn.net/zhouzhiwengang/article/details/88873540
 
 目录结构：
 
@@ -15,7 +16,7 @@
 │  ├─language           | 输出的文字提示，区分语言
 │  └─utils              | 工具函数
 ├─config                | 全局配置文件，按环境变量存放
-├─script                | 脚本：项目的辅助脚本    
+├─script                | 脚本：项目的辅助脚本
 └─src
     ├─controller        | 控制器：存放业务逻辑
     ├─middleware        | 中间件
@@ -23,16 +24,19 @@
     ├─routes            | 路由配置
     └─views             | 页面
 ```
+
 ---
 
 安装运行
 
 npm
+
 ```
 npm install && npm run dev
 ```
 
 yarn
+
 ```
 yarn && yarn run dev
 ```

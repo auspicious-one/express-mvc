@@ -1,10 +1,9 @@
 {
-  "name": "express-mvc",
+  "name": "@auspicious/express-mvc",
   "version": "1.0.0",
-  "description": "基于 express 框架快速构建的 NodeJS - MVC 项目",
+  "description": "基于 express 框架快速构建的 NodeJS - ES6 - MVC 项目",
   "main": "app.js",
-  "repository": "https://github.com/lovefive5/express-mvc.git",
-  "author": "Auspicious",
+  "author": "auspicious",
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -20,5 +19,9 @@
     "mysql2": "^2.1.0",
     "redis": "^3.0.2",
     "sequelize": "^5.21.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lovefive5/express-mvc.git"
   }
 }
