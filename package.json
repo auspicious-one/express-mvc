@@ -1,6 +1,6 @@
 {
   "name": "@auspicious/express-mvc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于 express 框架快速构建的 NodeJS - ES6 - MVC 项目",
   "main": "app.js",
   "author": "auspicious",
