@@ -3,7 +3,7 @@
  * @Author: Auspicious
  * @Email: <18437980785@163.com>
  * @Date: 2020/5/7 11:01
- * @LastEditors: missagril
+ * @LastEditors: Auspicious
  */
 const BaseModel = require('./BaseModel');
 
@@ -24,7 +24,7 @@ class UserModel extends BaseModel {
      * 获取用户列表
      */
     getUserList = async () => {
-        const result = await this.modelInstance.findAll({});
+        const result = await this.modelInstance.findAll(this.handleOptions());
 
         return this.handleResponse(result);
     }

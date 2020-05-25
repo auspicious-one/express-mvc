@@ -1,10 +1,10 @@
 /*
  * @Description: Model
  * @Author: Auspicious
- * @Email: <2845652616@qq.com>
+ * @Email: <18437980785@163.com>
  * @Date: 2020-04-28 18:43:13
  * @LastEditors: Auspicious
- * @LastEditTime: 2020-04-29 11:23:07
+ * @LastEditTime: 2020-05-25 14:39:45
  */
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
@@ -61,27 +61,31 @@ class BaseModel {
    * 针对options添加额外通用操作函数 , 按需增加参数
    * @param options
    * @param needTransaction 是否需要追加交易
+   * @param needOrm 是否获取Orm对象或者只获取数据结果集
    */
-  handleOptions(options = {}, needTransaction = true) {
+  handleOptions(options = {}, needTransaction = true, needOrm = false) {
     if (this.transaction && needTransaction) {
       options.transaction = this.transaction;
     }
+
+    options.raw = needOrm;
+
     return options;
   }
 
   /**
-   * 处理返回值为JSON
+   * 处理返回值为JSON - 读文档发现可以直接在 options 里设置 raw = true;
    * @param result
    * @param needParse
    * @returns {Object|Array}
    */
   handleResponse(result, needParse = true) {
-    if (result) {
-      if (Array.isArray(result) || needParse) {
-        return JSON.parse(JSON.stringify(result));
-      }
-      return result.toJSON();
-    }
+    // if (result) {
+    //   if (Array.isArray(result) || needParse) {
+    //     return JSON.parse(JSON.stringify(result));
+    //   }
+    //   return result.toJSON();
+    // }
     return result;
   }
 
